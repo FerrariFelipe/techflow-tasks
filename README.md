@@ -1,12 +1,12 @@
-TechFlow Tasks
+## TechFlow Tasks
 
 Sistema web para gerenciamento de tarefas desenvolvido como projeto da disciplina de Software Engineering.
-Objetivo
+## Objetivo
 
 O TechFlow Tasks tem como objetivo permitir o gerenciamento de tarefas por meio de uma interface web simples e intuitiva.
 
 O sistema permite cadastrar tarefas, definir prioridade e prazo, acompanhar o andamento e excluir tarefas.
-Funcionalidades
+## Funcionalidades
 
     Criar tarefas
     Visualizar tarefas
@@ -19,7 +19,7 @@ Funcionalidades
         Em Progresso
         Concluído
 
-Tecnologias
+## Tecnologias
 
     Python
     Flask
@@ -28,19 +28,19 @@ Tecnologias
     CSS
     Pytest
 
-Banco de dados
+## Banco de dados
 
 O sistema utiliza SQLite para armazenar as tarefas.
 
 O banco é criado automaticamente na primeira execução da aplicação.
-Testes automatizados
+## Testes automatizados
 
 Os testes foram desenvolvidos utilizando Pytest.
 
 Para executá-los:
 
 python -m pytest -v
-Executando o projeto
+## Executando o projeto
 
 Instale as dependências:
 
@@ -53,12 +53,33 @@ python taskflow_app.py
 Acesse no navegador:
 
 http://127.0.0.1:5000
-Mudança de escopo
+## Mudança de escopo
+Escopo inicial
 
-Inicialmente, o sistema foi planejado para realizar o CRUD de tarefas, permitindo criação, visualização, atualização e exclusão.
+Inicialmente, o sistema foi planejado para realizar o CRUD de tarefas, permitindo:
 
-Durante o desenvolvimento, foi identificada a necessidade de controlar também o prazo das atividades.
+    criação de tarefas;
+    visualização das tarefas;
+    atualização das informações;
+    alteração do status;
+    exclusão de tarefas.
 
-Por esse motivo, o escopo foi ampliado com a funcionalidade de data limite para cada tarefa.
+Necessidade identificada
 
-Essa mudança permite melhorar o acompanhamento das atividades e demonstrar a adaptação do projeto a novos requisitos.
+Durante o desenvolvimento, foi identificada a necessidade de controlar também os prazos das atividades. Apenas o status e a prioridade não eram suficientes para indicar quando cada tarefa deveria ser concluída.
+Alteração realizada
+
+Por esse motivo, o escopo do projeto foi ampliado com a inclusão do campo data limite, permitindo definir um prazo para cada tarefa.
+
+Essa mudança exigiu adaptações:
+
+    no banco de dados SQLite;
+    no formulário de criação;
+    na edição das tarefas;
+    na interface da aplicação;
+    nos testes automatizados.
+
+Impacto no projeto
+
+A mudança melhorou o acompanhamento das atividades e demonstrou a capacidade de adaptação do projeto diante de novos requisitos.
+A funcionalidade foi implementada sem remover os recursos planejados originalmente e foi validada por meio dos testes automatizados.
